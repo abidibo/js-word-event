@@ -25,3 +25,37 @@ var kw = new WordEvent({
     acceptedCode: (evt) => ((evt.keyCode > 47 && evt.keyCode < 58) || (evt.keyCode > 64 && evt.keyCode < 91)) || false
 });
 ```
+
+## Getting started
+
+**For the browser**:
+
+Add `dist/js-word-event.js` script in the document:
+
+``` html
+<script src="dist/js-word-event.js"></script>
+```
+
+**For node**:
+
+`npm install @abidibo/js-word-event --save`
+
+Example of react app:
+
+``` javascript
+import React from 'react'
+import { WordEvent } from '@abidibo/js-word-event'
+
+const MyComponent = () => {
+    React.useEffect(() => {
+        let k = new WordEvent()
+        k.listen('lol', () => console.log('TRIGGERED'))
+        k.activate()
+        return () => k.unlisten('lol')
+    }, [])
+
+    return (
+        <div>Some content</div>
+    )
+} 
+```
