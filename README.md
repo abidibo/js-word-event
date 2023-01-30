@@ -1,5 +1,7 @@
 # js-word-event
 
+![npm](https://img.shields.io/npm/v/@abidibo/js-word-event)
+
 This is a library which provides a `WordEvent` class that can be used to attach listeners to typed word events.
 
 Example:
