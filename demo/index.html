@@ -9,10 +9,9 @@
     <body>
         <script charset="utf-8">
             var kw = new WordEvent();
-            var searchme = () => console.log('MAO');
+            var searchme = (events) => console.log(events);
             kw.listen(['lol', /^7[a-z]*/], [function(evts) { alert('lol'); }, searchme]);
             kw.activate();
-            console.log('KW', kw) // eslint-disable-line
        </script> 
     </body>
 </html>
